@@ -54,5 +54,6 @@
 
     <modules>
         <module>statistic-service</module>
+        <module>student-service</module>
     </modules>
 </project>
