@@ -6,9 +6,9 @@ STATISTIC_SERVICE
 
 STUDENT_SERVICE
 
-        - localhost:8080/statistic-service/ping
-        - localhost:8080/student-service/students/all
-        - localhost:8080/student-service/students/22222
+        - localhost:8080/stud/ping
+        - localhost:8080/stud/students/all
+        - localhost:8080/stud/students/22222
 
 ARTICLE_SERVICE
 

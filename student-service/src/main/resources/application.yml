@@ -1,0 +1,38 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: student-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-7817355.okta.com/oauth2/default
+      client:
+        registration:
+          pricing-client:
+            provider: okta
+            authorization-grant-type: client_credentials
+            scope: profile
+            client-id: 0oa1lmz0aaF9NkKCi5d7
+            client-secret: roPg_Q2e26vHB5qfB4VXr-0gyhDPR75LMOB8SBsK
+        provider:
+          okta:
+            issuer-uri: https://dev-7817355.okta.com/oauth2/default
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+logging:
+  level:
+    com.okta.developer: DEBUG
+    org.springframework.web: DEBUG
+
+
+
+okta:
+  oauth2:
+    issuer: https://dev-7817355.okta.com/oauth2/default
+    audience: api://default
