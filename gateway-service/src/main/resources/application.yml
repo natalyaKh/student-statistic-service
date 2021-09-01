@@ -16,6 +16,12 @@ spring:
             - Path=/stud/**
           filters:
             - StripPrefix=1
+        - id: article-route
+          uri: lb://ARTICLE-SERVICE
+          predicates:
+            - Path=/art/**
+          filters:
+            - StripPrefix=1
       default-filters:
         - TokenRelay
 logging:

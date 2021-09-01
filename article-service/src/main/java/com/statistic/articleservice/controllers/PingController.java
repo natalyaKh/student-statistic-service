@@ -9,7 +9,7 @@ public class PingController {
 
     @Value("${spring.application.name}")
     String applicationName;
-    @GetMapping()
+    @GetMapping("/ping")
     public String ping(){
         return "I am work " + applicationName;
     }
