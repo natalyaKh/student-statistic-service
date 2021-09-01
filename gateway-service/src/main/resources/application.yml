@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: statistic-route
+          uri: lb://STATISTIC-SERVICE
+          predicates:
+            - Path=/stat/**
+          filters:
+            - StripPrefix=1
+        - id: student-route
+          uri: lb://STUDENT-SERVICE
+          predicates:
+            - Path=/stud/**
+          filters:
+            - StripPrefix=1
+      default-filters:
+        - TokenRelay
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty: DEBUG
+
+okta:
+  oauth2:
+    issuer: https://dev-7817355.okta.com/oauth2/default
+    client-id: 0oa1lmz0aaF9NkKCi5d7
+    client-secret: roPg_Q2e26vHB5qfB4VXr-0gyhDPR75LMOB8SBsK
