@@ -12,12 +12,11 @@ STUDENT_SERVICE
 
 ARTICLE_SERVICE
 
-        - localhost:8080/article-service
-        - localhost:8080/article-service/article/all
-        - localhost:8080/article-service/article/grade
+        - localhost:8080/art/ping
+        - localhost:8080/art/article/all
+        - localhost:8080/art/article/grade
             - body -> {
                          "articleUuid": "a11111",
-                             "articleGrade": "23.3"
+                             "articleGrade": "30"
                       }
             - PUT
-
