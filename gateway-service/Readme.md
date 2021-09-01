@@ -1,8 +1,8 @@
 STATISTIC_SERVICE
 
-        - localhost:8080/statistic-service/statistic/all
-        - localhost:8080/statistic-service/statistic/best
-        - localhost:8080/statistic-service/ping
+        - localhost:8080/stat/statistic/all
+        - localhost:8080/stat/statistic/best
+        - localhost:8080/stat/statistic/ping
 
 STUDENT_SERVICE
 
