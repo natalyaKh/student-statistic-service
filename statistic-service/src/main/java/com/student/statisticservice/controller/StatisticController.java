@@ -1,8 +1,9 @@
 package com.student.statisticservice.controller;
 
+import com.student.statisticservice.StudenService;
+import com.student.statisticservice.StudentDto;
 import com.student.statisticservice.dto.StatisticDto;
 import com.student.statisticservice.enums.Constants;
-import com.student.statisticservice.exceptions.StatisticExceptionHandler;
 import com.student.statisticservice.service.StatisticService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.List;
 
 
@@ -23,6 +25,16 @@ public class StatisticController {
 
     @Autowired
     StatisticService statisticService;
+    @Autowired
+    StudenService studenService;
+
+
+    @GetMapping("/test")
+    public List<StudentDto> getStudents(){
+        List<StudentDto> s = studenService.price();
+        return s;
+    }
+
 
     @GetMapping("/all")
     public ResponseEntity<List<StatisticDto>> getAllStatistic(){

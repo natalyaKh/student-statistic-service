@@ -14,7 +14,7 @@ spring:
           pricing-client:
             provider: okta
             authorization-grant-type: client_credentials
-            scope: profile
+            scope: groups
             client-id: 0oa1lmz0aaF9NkKCi5d7
             client-secret: roPg_Q2e26vHB5qfB4VXr-0gyhDPR75LMOB8SBsK
         provider:
