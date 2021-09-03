@@ -12,5 +12,5 @@ public class StatisticDto {
     String studentUuid;
     String studentName;
     Double grade;
-    Integer articlesCount;
+    Long articlesCount;
 }

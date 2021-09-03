@@ -1,4 +1,4 @@
-package com.student.statisticservice;
+package com.statistic.articleservice.dto;
 
 import lombok.*;
 
@@ -7,10 +7,9 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class ArticleDto {
-    String articleUuid;
-    String articleName;
+public class ArticleResponseDto {
     String studentUuid;
     Double articleGrade;
+    Long articleCount;
 
 }
