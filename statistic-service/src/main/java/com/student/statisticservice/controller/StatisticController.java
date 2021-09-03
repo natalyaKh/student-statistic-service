@@ -1,5 +1,7 @@
 package com.student.statisticservice.controller;
 
+import com.student.statisticservice.ArticleDto;
+import com.student.statisticservice.ArticleService;
 import com.student.statisticservice.StudenService;
 import com.student.statisticservice.StudentDto;
 import com.student.statisticservice.dto.StatisticDto;
@@ -27,7 +29,14 @@ public class StatisticController {
     StatisticService statisticService;
     @Autowired
     StudenService studenService;
+    @Autowired
+    ArticleService articleService;
 
+    @GetMapping("/arttest")
+    public List<ArticleDto> getArtucles(){
+        List<ArticleDto> s = articleService.getArticles();
+        return s;
+    }
 
     @GetMapping("/test")
     public List<StudentDto> getStudents(){
