@@ -17,7 +17,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/article")
 public class ArticleController {
-
     private static final Logger LOGGER = LoggerFactory.getLogger(ArticleController.class);
 
     @Autowired
