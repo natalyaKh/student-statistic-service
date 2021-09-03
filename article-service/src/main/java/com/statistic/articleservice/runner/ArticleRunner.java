@@ -18,7 +18,7 @@ public class ArticleRunner implements CommandLineRunner {
     public void run(String... args){
         LOGGER.info("created students " + LocalDateTime.now());
       ArticleDto art1 = ArticleDto.builder()
-          .articleGrade(90.0)
+          .articleGrade(2430.0)
           .articleName("article1")
           .articleUuid("a11111")
           .studentUuid("11111")
@@ -30,7 +30,7 @@ public class ArticleRunner implements CommandLineRunner {
             .studentUuid("11111")
             .build();
         ArticleDto art3 = ArticleDto.builder()
-            .articleGrade(50.0)
+            .articleGrade(540.0)
             .articleName("article3")
             .articleUuid("a33333")
             .studentUuid("22222")
@@ -48,31 +48,31 @@ public class ArticleRunner implements CommandLineRunner {
             .studentUuid("22222")
             .build();
         ArticleDto art6 = ArticleDto.builder()
-            .articleGrade(10.0)
+            .articleGrade(1024.0)
             .articleName("article6")
             .articleUuid("a66666")
-            .studentUuid("666666")
+            .studentUuid("66666")
             .build();
         ArticleDto art7 = ArticleDto.builder()
-            .articleGrade(null)
+            .articleGrade(1044.0)
             .articleName("article7")
             .articleUuid("a77777")
             .studentUuid("88888")
             .build();
         ArticleDto art8 = ArticleDto.builder()
-            .articleGrade(null)
+            .articleGrade(1034.0)
             .articleName("article8")
             .articleUuid("a88888")
             .studentUuid("88888")
             .build();
         ArticleDto art9 = ArticleDto.builder()
-            .articleGrade(null)
+            .articleGrade(102.0)
             .articleName("article9")
             .articleUuid("a99999")
             .studentUuid("88888")
             .build();
         ArticleDto art10 = ArticleDto.builder()
-            .articleGrade(10.0)
+            .articleGrade(102.0)
             .articleName("article10")
             .articleUuid("a10101")
             .studentUuid("10101")

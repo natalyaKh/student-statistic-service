@@ -1,6 +1,8 @@
 server:
   port: 8082
 
+articleUrl: http://article-service/article/all
+
 spring:
   application:
     name: statistic-service
@@ -29,8 +31,6 @@ logging:
   level:
     com.okta.developer: DEBUG
     org.springframework.web: DEBUG
-
-
 
 okta:
   oauth2:

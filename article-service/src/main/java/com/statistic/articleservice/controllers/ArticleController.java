@@ -2,6 +2,7 @@ package com.statistic.articleservice.controllers;
 
 import com.statistic.articleservice.dto.AddGradeDto;
 import com.statistic.articleservice.dto.ArticleDto;
+import com.statistic.articleservice.dto.ArticleResponseDto;
 import com.statistic.articleservice.enums.Constants;
 import com.statistic.articleservice.service.ArticleService;
 import org.slf4j.Logger;
@@ -23,8 +24,8 @@ public class ArticleController {
     ArticleService articleService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<ArticleDto>> getAllArticles() {
-        List<ArticleDto> articlesDtoList = articleService.getAllArticles();
+    public ResponseEntity <List<ArticleResponseDto>> getAllArticles() {
+        List<ArticleResponseDto> articlesDtoList = articleService.getAllArticles();
         LOGGER.info(Constants.LIST_OF_ALL_ARTICLES + Constants.RETURNED);
         return new ResponseEntity<>(articlesDtoList, HttpStatus.OK);
     }

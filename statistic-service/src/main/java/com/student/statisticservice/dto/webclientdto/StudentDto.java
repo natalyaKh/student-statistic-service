@@ -1,4 +1,4 @@
-package com.student.statisticservice;
+package com.student.statisticservice.dto.webclientdto;
 
 import lombok.*;
 

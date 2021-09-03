@@ -1,12 +1,10 @@
 package com.student.statisticservice.controller;
 
-import com.student.statisticservice.ArticleDto;
-import com.student.statisticservice.ArticleService;
-import com.student.statisticservice.StudenService;
-import com.student.statisticservice.StudentDto;
+import com.student.statisticservice.service.webclientservice.ArticleService;
+import com.student.statisticservice.service.webclientservice.StudentsService;
 import com.student.statisticservice.dto.StatisticDto;
 import com.student.statisticservice.enums.Constants;
-import com.student.statisticservice.service.StatisticService;
+import com.student.statisticservice.service.statistic.StatisticService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,22 +25,6 @@ public class StatisticController {
 
     @Autowired
     StatisticService statisticService;
-    @Autowired
-    StudenService studenService;
-    @Autowired
-    ArticleService articleService;
-
-    @GetMapping("/arttest")
-    public List<ArticleDto> getArtucles(){
-        List<ArticleDto> s = articleService.getArticles();
-        return s;
-    }
-
-    @GetMapping("/test")
-    public List<StudentDto> getStudents(){
-        List<StudentDto> s = studenService.price();
-        return s;
-    }
 
 
     @GetMapping("/all")
